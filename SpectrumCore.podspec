@@ -44,6 +44,7 @@ Spectrum is a cross-platform image transcoding library that can easily be integr
       plugins_png_spec.dependency 'SpectrumCore/Base', version
       plugins_png_spec.dependency 'libpng', '~> 1.6.35'
       plugins_png_spec.source_files = 'cpp/spectrum/plugins/png/**/*.{h,cpp}'
+      plugins_png_spec.exclude_files = 'cpp/spectrum/plugins/png/libpng/**/*'
       plugins_png_spec.header_dir = 'spectrum/plugins/png'
       plugins_png_spec.header_mappings_dir = 'cpp/spectrum/plugins/png'
     end
