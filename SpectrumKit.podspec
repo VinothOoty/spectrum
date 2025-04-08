@@ -36,8 +36,6 @@ Spectrum is a cross-platform image transcoding library that can easily be integr
   spec.subspec 'Plugins' do |plugins_spec|
     plugins_spec.subspec 'Default' do |default_spec|
       default_spec.dependency 'SpectrumKit/Plugins/Jpeg', version
-      default_spec.dependency 'SpectrumKit/Plugins/Png', version
-      default_spec.dependency 'SpectrumKit/Plugins/Webp', version
       default_spec.source_files = 'ios/SpectrumKit/SpectrumKitPlugins/Default/**/*'
     end
 
@@ -47,16 +45,16 @@ Spectrum is a cross-platform image transcoding library that can easily be integr
       plugins_jpeg_spec.source_files = 'ios/SpectrumKit/SpectrumKitPlugins/Jpeg/**/*'
     end
 
-    plugins_spec.subspec 'Png' do |plugins_png_spec|
-      plugins_png_spec.dependency 'SpectrumKit/Base', version
-      plugins_png_spec.dependency 'SpectrumCore/Plugins/Png', version
-      plugins_png_spec.source_files = 'ios/SpectrumKit/SpectrumKitPlugins/Png/**/*'
-    end
+    # plugins_spec.subspec 'Png' do |plugins_png_spec|
+    #   plugins_png_spec.dependency 'SpectrumKit/Base', version
+    #   plugins_png_spec.dependency 'SpectrumCore/Plugins/Png', version
+    #   plugins_png_spec.source_files = 'ios/SpectrumKit/SpectrumKitPlugins/Png/**/*'
+    # end
 
-    plugins_spec.subspec 'Webp' do |plugins_webp_spec|
-      plugins_webp_spec.dependency 'SpectrumKit/Base', version
-      plugins_webp_spec.dependency 'SpectrumCore/Plugins/Webp', version
-      plugins_webp_spec.source_files = 'ios/SpectrumKit/SpectrumKitPlugins/Webp/**/*'
-    end
+    # plugins_spec.subspec 'Webp' do |plugins_webp_spec|
+    #   plugins_webp_spec.dependency 'SpectrumKit/Base', version
+    #   plugins_webp_spec.dependency 'SpectrumCore/Plugins/Webp', version
+    #   plugins_webp_spec.source_files = 'ios/SpectrumKit/SpectrumKitPlugins/Webp/**/*'
+    # end
   end
 end

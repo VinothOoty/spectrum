@@ -17,9 +17,7 @@ Spectrum is a cross-platform image transcoding library that can easily be integr
   spec.authors = 'Facebook'
   spec.source = { :git => 'https://github.com/facebookincubator/spectrum.git', :tag => "v#{version}" }
   spec.ios.deployment_target = '8.0'
-  spec.default_subspecs = 'Plugins/Jpeg',
-                          'Plugins/Png',
-                          'Plugins/Webp'
+  spec.default_subspecs = 'Plugins/Jpeg'
 
   spec.dependency 'spectrum-folly', '~> 2019.01.21.00'
   spec.compiler_flags = compiler_flags
@@ -40,22 +38,22 @@ Spectrum is a cross-platform image transcoding library that can easily be integr
       plugins_jpeg_spec.header_mappings_dir = 'cpp/spectrum/plugins/jpeg'
     end
 
-    plugins_spec.subspec 'Png' do |plugins_png_spec|
-      plugins_png_spec.dependency 'SpectrumCore/Base', version
-      plugins_png_spec.dependency 'libpng', '~> 1.6.35'
-      plugins_png_spec.source_files = 'cpp/spectrum/plugins/png/**/*.{h,cpp}'
-      plugins_png_spec.exclude_files = 'cpp/spectrum/plugins/png/libpng/**/*'
-      plugins_png_spec.header_dir = 'spectrum/plugins/png'
-      plugins_png_spec.header_mappings_dir = 'cpp/spectrum/plugins/png'
-    end
+    # plugins_spec.subspec 'Png' do |plugins_png_spec|
+    #   plugins_png_spec.dependency 'SpectrumCore/Base', version
+    #   plugins_png_spec.dependency 'libpng', '~> 1.6.35'
+    #   plugins_png_spec.source_files = 'cpp/spectrum/plugins/png/**/*.{h,cpp}'
+    #   plugins_png_spec.exclude_files = 'cpp/spectrum/plugins/png/libpng/**/*'
+    #   plugins_png_spec.header_dir = 'spectrum/plugins/png'
+    #   plugins_png_spec.header_mappings_dir = 'cpp/spectrum/plugins/png'
+    # end
 
-    plugins_spec.subspec 'Webp' do |plugins_webp_spec|
-      plugins_webp_spec.dependency 'SpectrumCore/Base', version
-      plugins_webp_spec.dependency 'libwebp', '~> 1.1.0'
-      plugins_webp_spec.source_files = 'cpp/spectrum/plugins/webp/**/*.{h,cpp}'
-      plugins_webp_spec.header_dir = 'spectrum/plugins/webp'
-      plugins_webp_spec.header_mappings_dir = 'cpp/spectrum/plugins/webp'
-      plugins_webp_spec.compiler_flags = "-DCOCOAPODS_BUILD"
-    end
+    # plugins_spec.subspec 'Webp' do |plugins_webp_spec|
+    #   plugins_webp_spec.dependency 'SpectrumCore/Base', version
+    #   plugins_webp_spec.dependency 'libwebp', '~> 1.1.0'
+    #   plugins_webp_spec.source_files = 'cpp/spectrum/plugins/webp/**/*.{h,cpp}'
+    #   plugins_webp_spec.header_dir = 'spectrum/plugins/webp'
+    #   plugins_webp_spec.header_mappings_dir = 'cpp/spectrum/plugins/webp'
+    #   plugins_webp_spec.compiler_flags = "-DCOCOAPODS_BUILD"
+    # end
   end
 end
